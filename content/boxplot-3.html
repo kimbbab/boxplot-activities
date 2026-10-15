@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>7.2 생각넓히기2</title>
+  <link rel="stylesheet" href="../amanta/da_mi_math2/public/common/css/amt-content.css">
+  <link rel="stylesheet" href="../amanta/da_mi_math2/dist/lesson07/LOCAL_STAT_HISTBOX_LESSON_am/css/amt-index.bundle.css">
+  <link rel="stylesheet" href="../amanta/da_mi_math2/dist/lesson07/LOCAL_STAT_HISTBOX_LESSON_am/css/amt-index.css">
+</head>
+<body>
+<div id="amt-viewer-wraper" class="html-type histogram-page lesson-page" style="display:none">
+ <div id="content" class="corner_think_wide color-type-2">
+  <div id="quiz-main-01">
+   <!-- 본문 메인 스크롤 영역 -->
+   <div class="main-scroll scroll-cont js-scroll-cont" tabindex="0" aria-label="생각 넓히기 활동 본문">
+    <div class="scroll-inner" style="height: auto">
+     <div class="title-main">
+      <div class="bullet">
+       <div class="text">생각 넓히기</div>
+       <div class="icons"><div class="icon bc-green">추론</div><div class="icon bc-orange">연결</div><div class="icon bc-purple">정보처리</div></div>
+      </div>
+      <div class="text-cont"><div class="text-1">다음은 어느 제작사의 영화 30편의 제작비를 조사한 것이다.<br>아래 도구를 이용하여 물음에 답하시오.</div></div>
+     </div>
+     <div class="content-area content-area-01">
+      <div class="content-box content-box-01" style="height: auto">
+       <div class="lesson-data-heading"><div class="text-1">영화 제작비</div><div class="lesson-unit">(단위: 억 원)</div></div>
+       <div id="table-cont-01" class="table-cont type-1 lesson-data-table">
+        <table class="table"><caption class="sr-only">영화 30편의 제작비, 단위 억 원</caption><colgroup><col span="10"></colgroup><tbody><tr><td>25</td><td>25</td><td>27</td><td>28</td><td>29</td><td>30</td><td>30</td><td>32</td><td>33</td><td>33</td></tr>
+<tr><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td></tr>
+<tr><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>48</td><td>49</td><td>50</td><td>50</td></tr></tbody></table>
+       </div>
+       <div class="bracket-num-text lesson-question"><div class="num">(<span class="count">1</span>)</div><div class="text">히스토그램과 상자그림을 각각 나타내시오.</div></div>
+      </div>
+      <!-- 본문 활동 도구: 입력·계산·그래프가 작동하는 삽입 영역 -->
+      <div aria-label="히스토그램과 상자그림 비교 도구" class="content-box content-box-02 bp-activity" id="lesson-tool" role="region" style="height: auto">
+<!-- 활동 입력 유형 : quiz-input -->
+<div class="quiz-input" id="quiz-tool-01">
+<form id="hb-form" novalidate="">
+<div class="hb-input-head">
+<label for="hb-name">
+             자료 이름
+            </label>
+<span class="input-box js-input-box input-01 activity-input-box" data-input-for="hb-name">
+<input autocomplete="off" class="g-input js-input" id="hb-name" maxlength="16" type="text" value="영화 제작비"/>
+<span aria-hidden="true" class="placeholder">
+</span>
+</span>
+<label for="hb-unit">
+             단위
+            </label>
+<span class="input-box js-input-box input-02 activity-input-box" data-input-for="hb-unit">
+<input autocomplete="off" class="g-input js-input" id="hb-unit" maxlength="8" type="text" value="억 원"/>
+<span aria-hidden="true" class="placeholder">
+</span>
+</span>
+<span id="hb-count">
+</span>
+</div>
+<label class="sr-only" for="hb-data">
+            자료 입력
+           </label>
+<div class="input-box js-input-box input-03 activity-input-box" data-input-for="hb-data">
+<textarea aria-describedby="hb-error" class="g-input js-input" id="hb-data" placeholder="쉼표 또는 공백으로 구분하여 입력" rows="3" spellcheck="false">25, 25, 27, 28, 29, 30, 30, 32, 33, 33,
+34, 35, 36, 37, 38, 38, 39, 40, 41, 42,
+43, 44, 45, 46, 47, 48, 48, 49, 50, 50</textarea>
+<span aria-hidden="true" class="placeholder">
+</span>
+</div>
+<div class="hb-controls">
+<label for="hb-width">
+             계급의 크기
+            </label>
+<span class="input-box js-input-box input-04 activity-input-box" data-input-for="hb-width">
+<input aria-describedby="hb-error" class="g-input js-input" id="hb-width" inputmode="decimal" type="text" value="5"/>
+<span aria-hidden="true" class="placeholder">
+</span>
+</span>
+<label for="hb-start">
+             계급 시작값
+            </label>
+<span class="input-box js-input-box input-05 activity-input-box" data-input-for="hb-start">
+<input aria-describedby="hb-error" class="g-input js-input" id="hb-start" inputmode="decimal" type="text" value="25"/>
+<span aria-hidden="true" class="placeholder">
+</span>
+</span>
+<p id="hb-error" role="alert">
+</p>
+<button class="g-icon restart btn-restart bp-button" data-always-show="true" id="hb-reset" type="button">
+<span class="text">
+              초기화
+             </span>
+</button>
+<button class="btn-type-1 bp-button bp-primary" type="submit">
+<span class="text">
+              그래프 그리기
+             </span>
+</button>
+</div>
+</form>
+</div>
+<!-- 다섯 수 정리 표 :: table-cont type-1 -->
+<div class="table-cont type-1 hb-summary-wrap" id="table-cont-02">
+<table class="table bp-summary">
+<caption class="sr-only">
+            다섯 수 정리
+           </caption>
+<colgroup>
+<col style="width:190px"/>
+<col span="5"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col">
+              자료
+             </th>
+<th scope="col">
+              최솟값
+             </th>
+<th scope="col">
+              제1사분위수
+             </th>
+<th scope="col">
+              중앙값
+             </th>
+<th scope="col">
+              제3사분위수
+             </th>
+<th scope="col">
+              최댓값
+             </th>
+</tr>
+</thead>
+<tbody id="hb-summary">
+</tbody>
+</table>
+</div>
+<div class="hb-graph-wrap">
+<canvas aria-describedby="hb-chart-desc" aria-label="히스토그램과 상자그림" height="354" id="hb-chart" role="img" width="1200">그래프의 수치와 설명은 다음 텍스트와 다섯 수 표에서 확인할 수 있습니다.</canvas><p class="sr-only" id="hb-chart-desc"></p>
+</div>
+<p aria-live="polite" class="sr-only" id="hb-status" role="status">
+</p>
+</div>
+      <div class="content-box content-box-03" style="height: auto">
+       <div class="bracket-num-text lesson-question"><div class="num">(<span class="count">2</span>)</div><div class="text">(1)에서 나타낸 그래프를 친구들과 비교하시오.</div></div>
+       <div class="flex-box flex-column">
+        <div class="flex-inner">
+         <div id="quiz-01" class="quiz-input type-textarea-1 textarea-1-1">
+          <div id="lesson-answer-label" class="bracket-num-text lesson-question"><div class="num">(<span class="count">3</span>)</div><div class="text">(2)에서 알게 된 상자그림의 좋은 점을 말하시오.</div></div>
+          <div class="input-box js-input-box input-01 lesson-answer-box">
+           <textarea id="lesson-answer" class="js-input" aria-labelledby="lesson-answer-label" placeholder="입력해 보세요." maxlength="2000"></textarea>
+           <div class="placeholder" aria-hidden="true">입력해 보세요.</div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- bottom 버튼들: 원본 생각 넓히기와 같은 구조 -->
+   <div class="bottom-g-icon btns-bottom">
+    <button id="lesson-example" type="button" class="g-icon answer example btn-answer" aria-controls="answer-popup-01" aria-expanded="false" data-toggle-texts="예시,닫기"><span class="text">예시</span></button>
+    <div id="answer-popup-01" class="g-answer-cont example d-none" role="region" aria-label="예시 답안">
+     <div class="inner"><div class="body"><div class="explain-block">
+      <div class="bullet">예시</div><div class="text-cont"><div class="bracket-num-text"><div class="num">(<span class="count">3</span>)</div><div class="text">히스토그램은 계급의 크기에 따라 모양이 달라질 수 있다. 상자그림은 최솟값, 제1사분위수, 중앙값, 제3사분위수, 최댓값으로 나타내므로 같은 자료를 항상 같은 모양으로 나타낼 수 있다. 또 자료의 분포를 간단하게 나타내어 비교하기 쉽다.</div></div></div>
+     </div></div></div>
+    </div>
+    <p id="lesson-status" role="status" aria-live="polite"></p>
+    <button id="lesson-reset" type="button" class="g-icon restart btn-restart" data-always-show="true"><span class="text">다시 하기</span></button>
+    <button id="lesson-complete" type="button" class="g-icon complete btn-complete" aria-pressed="false"><span class="text">완료하기</span></button>
+   </div>
+  </div>
+ </div>
+</div>
+<script src="../amanta/da_mi_math2/dist/lesson07/LOCAL_STAT_HISTBOX_LESSON_am/js/amt-index.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* amt-index.css */
+#amt-viewer-wraper .algeo-container{position:absolute;left:0;top:0}#amt-viewer-wraper .content-area .custom-triangle{display:inline-block;width:22px;height:15px;background-repeat:no-repeat;background-size:contain;background-image:url("../images/icon_triangle.png")}#amt-viewer-wraper .content-area .content-box .algeo-text-01{position:absolute;left:229px;top:483px}#amt-viewer-wraper .content-area .content-box .algeo-text-02{position:absolute;left:820px;top:483px}#amt-viewer-wraper .content-area .content-box .num-circle{text-indent:0;font-family:ns-kr-m;width:30px;height:30px;background-color:#858992;color:#fff;font-size:22px;font-weight:700;display:flex;justify-content:center;align-items:center;border-radius:50%;position:absolute;left:46px;top:5px}
+
+/* boxplot.css */
+/* 업체 공통/차시 CSS를 유지하고 활동을 1280×720 한 화면에 배치합니다. */
+html,body{margin:0;width:100%;height:100%;background:#fff;min-width:0;overflow:hidden}
+#amt-viewer-wraper.boxplot-page{position:absolute;width:1280px;height:720px;transform-origin:top left;font-family:pre-m,"Malgun Gothic",sans-serif;color:#111}
+#amt-viewer-wraper.boxplot-page [hidden]{display:none!important}
+#amt-viewer-wraper.boxplot-page #content{width:1280px;height:720px;overflow:hidden;background:#fff}
+#amt-viewer-wraper.boxplot-page .main-scroll{width:1280px;height:720px;overflow:hidden}
+#amt-viewer-wraper.boxplot-page .scroll-inner{width:1280px;height:720px;overflow:hidden}
+#amt-viewer-wraper.boxplot-page .title-main{height:86px;padding:0}
+#amt-viewer-wraper.boxplot-page .bp-page-title{position:absolute;left:424px;top:30px;width:385px;margin:0;color:#232f5b;font-family:pre-sb,"Malgun Gothic",sans-serif;font-size:25px;line-height:32px;white-space:nowrap}
+#amt-viewer-wraper.boxplot-page .bp-modes{position:absolute;right:40px;top:18px;display:flex;gap:12px}
+#amt-viewer-wraper.boxplot-page .bp-modes button{height:54px;padding:0 25px;border:2px solid #d5cde4;border-radius:13px;background:#f7f4fb;color:#75618f;font-family:pre-sb;font-size:23px;display:flex;align-items:center;gap:12px}
+#amt-viewer-wraper.boxplot-page .bp-modes button .num{display:flex;align-items:center;justify-content:center;width:29px;height:29px;border-radius:50%;background:#e5dff0;font-size:19px}
+#amt-viewer-wraper.boxplot-page .bp-modes button[aria-selected=true]{background:#917ac0;border-color:#917ac0;color:#fff}
+#amt-viewer-wraper.boxplot-page .bp-modes button[aria-selected=true] .num{background:#fff;color:#8064b0}
+#amt-viewer-wraper.boxplot-page .content-area{padding:0;font-size:22px;line-height:1.4}
+#amt-viewer-wraper.boxplot-page .bp-activity{margin:0 40px;width:1200px}
+#amt-viewer-wraper.boxplot-page #bp-form{height:224px;padding:13px 22px 12px;border:2px solid #b8d2f5;border-radius:15px;background:#f8fbff;display:flex;flex-direction:column}
+#amt-viewer-wraper.boxplot-page .bp-data-head,#amt-viewer-wraper.boxplot-page .bp-result-head{display:flex;align-items:center;justify-content:space-between;gap:20px}
+#amt-viewer-wraper.boxplot-page .bp-data-head{height:30px;margin-bottom:5px;flex-shrink:0}
+#amt-viewer-wraper.boxplot-page .bp-data-head .text-1,#amt-viewer-wraper.boxplot-page .bp-result-head .text-1{font-family:pre-sb;font-size:25px;color:#232f5b}
+#amt-viewer-wraper.boxplot-page .bp-input-panel{height:114px;display:flex;flex-direction:column;justify-content:center;gap:7px}
+#amt-viewer-wraper.boxplot-page .bp-data-row{display:flex;align-items:center;gap:14px;height:45px}
+#amt-viewer-wraper.boxplot-page .bp-data-label{display:flex;align-items:center;gap:9px;flex-shrink:0;width:174px;font-family:pre-sb;font-size:21px}
+#amt-viewer-wraper.boxplot-page .bp-dot{display:inline-block;flex-shrink:0;width:12px;height:12px;border-radius:50%}
+#amt-viewer-wraper.boxplot-page .bp-dot-a{background:#917ac0}
+#amt-viewer-wraper.boxplot-page .bp-dot-b{background:#278eaa}
+#amt-viewer-wraper.boxplot-page .bp-input-panel input{position:static;display:block;width:100%;min-width:0;height:42px;border:1px solid #c4cddd;border-radius:8px;padding:6px 13px;background:#fff;color:#24262f;font-family:pre-m,"Malgun Gothic",sans-serif;font-size:23px;line-height:1.25;letter-spacing:0}
+#amt-viewer-wraper.boxplot-page .bp-input-panel input:focus-visible{outline:3px solid #917ac0!important;outline-offset:1px}
+#amt-viewer-wraper.boxplot-page .bp-input-panel input[aria-invalid=true]{border-color:#c84848;background:#fff9f8}
+#amt-viewer-wraper.boxplot-page #bp-five-panel{gap:5px;justify-content:flex-start}
+#amt-viewer-wraper.boxplot-page .bp-five-labels,#amt-viewer-wraper.boxplot-page .bp-five-row{display:grid;grid-template-columns:174px repeat(5,minmax(0,1fr));gap:12px;align-items:center}
+#amt-viewer-wraper.boxplot-page .bp-five-labels{height:22px;font-size:18px;text-align:center;color:#535764}
+#amt-viewer-wraper.boxplot-page .bp-five-row input{text-align:center;height:38px;font-size:22px}
+#amt-viewer-wraper.boxplot-page .bp-input-panel .bp-name-input{font-family:pre-sb,"Malgun Gothic",sans-serif;font-size:21px;padding:6px 9px;text-align:left;border-color:#c9bee0;background:#fcfaff}
+#amt-viewer-wraper.boxplot-page .bp-second-row .bp-name-input{border-color:#a8ccd8;background:#f6fcfe}
+#amt-viewer-wraper.boxplot-page .bp-input-footer{display:flex;align-items:center;justify-content:flex-end;gap:10px;height:42px;margin-top:auto;flex-shrink:0}
+#amt-viewer-wraper.boxplot-page #bp-error{flex:1;color:#b72e2e;font-size:16px;line-height:1.25;max-height:40px;overflow:hidden;padding-right:5px}
+#amt-viewer-wraper.boxplot-page .bp-button{position:static;height:41px;padding:6px 20px;border:2px solid #c2cde0;border-radius:9px;background:#fff;color:#62708a;font-family:pre-sb;font-size:21px;white-space:nowrap}
+#amt-viewer-wraper.boxplot-page .bp-button:hover{filter:brightness(.96)}
+#amt-viewer-wraper.boxplot-page .bp-primary{background:#917ac0;border-color:#917ac0;color:white}
+#amt-viewer-wraper.boxplot-page .bp-result-head{height:43px;margin:8px 0 4px}
+#amt-viewer-wraper.boxplot-page .bp-summary-wrap{height:110px;margin-bottom:8px;border:1px solid #d9e1ed;border-radius:10px;background:#fff;overflow:hidden}
+#amt-viewer-wraper.boxplot-page .bp-summary{width:100%;height:100%;table-layout:fixed;border-collapse:collapse;text-align:center;font-size:21px;line-height:1.1}
+#amt-viewer-wraper.boxplot-page .bp-summary th,#amt-viewer-wraper.boxplot-page .bp-summary td{padding:0 9px;border-right:1px solid #e1e5ee;border-bottom:1px solid #e1e5ee;vertical-align:middle}
+#amt-viewer-wraper.boxplot-page .bp-summary tr>:last-child{border-right:0}
+#amt-viewer-wraper.boxplot-page .bp-summary tbody tr:last-child>*{border-bottom:0}
+#amt-viewer-wraper.boxplot-page .bp-summary thead{height:30px;background:#f2f4fa;color:#535764;font-size:18px;font-family:pre-m,"Malgun Gothic",sans-serif}
+#amt-viewer-wraper.boxplot-page .bp-summary tbody tr{height:39px}
+#amt-viewer-wraper.boxplot-page .bp-summary tbody th{font-family:pre-sb,"Malgun Gothic",sans-serif;font-size:17px;line-height:18px;overflow-wrap:anywhere;background:#faf9fc}
+#amt-viewer-wraper.boxplot-page .bp-summary tr[data-series=a]{color:#8064ac}
+#amt-viewer-wraper.boxplot-page .bp-summary tr[data-series=b]{color:#278eaa}
+#amt-viewer-wraper.boxplot-page .bp-summary .bp-long-number{font-size:16px}
+#amt-viewer-wraper.boxplot-page .bp-graph-wrap{height:230px;border:1px solid #d9e1ed;border-radius:12px;background:#fff;overflow:hidden}
+#amt-viewer-wraper.boxplot-page[data-mode=five] .bp-graph-wrap{height:348px}
+#amt-viewer-wraper.boxplot-page #bp-chart{display:block;width:100%;height:100%}
+#amt-viewer-wraper.boxplot-page .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media print{#amt-viewer-wraper.boxplot-page{position:relative;transform:none!important;left:0!important;top:0!important;zoom:.75}}
+
+/* vendor-embed.css */
+/* 업체 화면에서 활동 제목을 제공하는 삽입용 배치. */
+#amt-viewer-wraper.boxplot-page.vendor-embed .title-main{height:74px}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-modes{left:auto;right:40px;top:10px}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .content-area{padding-top:16px}
+
+/* MAT_M20_08020P03_am의 입력·표 골격을 현재 활동 크기에 맞춥니다. */
+#amt-viewer-wraper.boxplot-page.vendor-embed .content-area.type-think{position:relative;left:0;top:0;margin:0;padding:0;width:1280px}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .content-area.type-think{padding-top:16px}
+#amt-viewer-wraper.boxplot-page.vendor-embed .content-area>.content-box.bp-activity{position:relative;left:0;top:0;width:1200px;margin:0 40px;padding:0;border:0;border-radius:0;background:none;font-size:22px;line-height:1.4}
+#amt-viewer-wraper.boxplot-page.vendor-embed .quiz-input{position:relative;left:0;top:0;margin:0;padding:0;width:100%;height:auto}
+#amt-viewer-wraper.boxplot-page.vendor-embed .flex-box.bp-data-row{padding:0;justify-content:flex-start}
+#amt-viewer-wraper.boxplot-page.vendor-embed .activity-input-box{position:relative;left:auto;top:auto;display:inline-block;margin:0;padding:0;border:0;background:none;min-width:0;height:auto;vertical-align:middle;font:inherit;text-indent:0;line-height:normal}
+#amt-viewer-wraper.boxplot-page.vendor-embed .activity-input-box>.placeholder{display:none}
+#amt-viewer-wraper.boxplot-page.vendor-embed .activity-input-box::before,#amt-viewer-wraper.boxplot-page.vendor-embed .activity-input-box::after{display:none}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-data-row>.activity-input-box,#amt-viewer-wraper.boxplot-page.vendor-embed .bp-data-label>.activity-input-box{flex:1;display:block}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-five-row>.activity-input-box{width:100%;display:block}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-input-panel .activity-input-box>.g-input{width:100%;position:static}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-modes.tab-menu{margin:0;padding:0}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-modes button>.text{position:static;display:inline;min-width:0;width:auto;height:auto;padding:0;margin:0;background:none;color:inherit;border-radius:0;font:inherit}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-button.g-icon,#amt-viewer-wraper.boxplot-page.vendor-embed .bp-button.btn-type-1{position:static;display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:0;transform:none;text-indent:0;background-image:none}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-button::before,#amt-viewer-wraper.boxplot-page.vendor-embed .bp-button::after{display:none}
+#amt-viewer-wraper.boxplot-page.vendor-embed .bp-button>.text{position:static;left:auto;top:auto;display:inline;width:auto;min-width:0;margin:0;padding:0;line-height:1;font:inherit;color:inherit;text-indent:0;transform:none}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1{position:relative;left:0;top:0;width:100%;padding:0}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table{width:100%;height:100%;border:0;border-collapse:collapse;table-layout:fixed}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table th,#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table td{height:auto;min-width:0;padding:0 9px;border:0;border-right:1px solid #e1e5ee;border-bottom:1px solid #e1e5ee;font-size:inherit;line-height:inherit}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table tr>:last-child{border-right:0}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table tbody tr:last-child>*{border-bottom:0}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table tbody th{font-family:pre-sb;font-size:17px;line-height:18px}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table thead th{background:#f2f4fa}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table tbody th{background:#faf9fc}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table tbody td{background:#fff}
+#amt-viewer-wraper.boxplot-page.vendor-embed .table-cont.type-1>.table caption.sr-only{position:absolute}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .activity-input-box[data-input-for=hb-name]{width:260px;height:32px}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .activity-input-box[data-input-for=hb-unit]{width:110px;height:32px}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .activity-input-box[data-input-for=hb-data]{display:block;width:100%;height:84px;flex-shrink:0}
+#amt-viewer-wraper.boxplot-page.vendor-embed.histogram-page .hb-controls>.activity-input-box{width:90px;height:36px;flex-shrink:0}

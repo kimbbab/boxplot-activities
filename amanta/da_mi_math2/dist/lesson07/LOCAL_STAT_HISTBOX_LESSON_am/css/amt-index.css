@@ -1,0 +1,83 @@
+/* Embedded graph inputs */
+#amt-viewer-wraper.histogram-page .bp-page-title{width:780px}
+#amt-viewer-wraper.histogram-page #hb-form{height:192px;padding:10px 20px;border:2px solid #b8d2f5;border-radius:15px;background:#f8fbff;display:flex;flex-direction:column;gap:7px}
+#amt-viewer-wraper.histogram-page .hb-input-head{display:flex;align-items:center;gap:12px;height:32px;flex-shrink:0;font-size:20px;font-family:pre-sb}
+#amt-viewer-wraper.histogram-page .activity-input-box>input,#amt-viewer-wraper.histogram-page .activity-input-box>textarea{position:static;border:1px solid #c4cddd;border-radius:7px;background:#fff;color:#24262f;font-family:pre-m,"Malgun Gothic",sans-serif;letter-spacing:0;padding:4px 10px;line-height:1.25;min-width:0}
+#amt-viewer-wraper.histogram-page input:focus-visible,#amt-viewer-wraper.histogram-page textarea:focus-visible{outline:3px solid #917ac0!important;outline-offset:1px}
+#amt-viewer-wraper.histogram-page .activity-input-box>[aria-invalid=true]{border-color:#c84848;background:#fff9f8}
+#amt-viewer-wraper.histogram-page #hb-name{height:32px;width:260px;font-size:20px}
+#amt-viewer-wraper.histogram-page #hb-unit{height:32px;width:110px;font-size:20px}
+#amt-viewer-wraper.histogram-page #hb-count{margin-left:auto;color:#75618f;font-size:18px}
+#amt-viewer-wraper.histogram-page #hb-data{display:block;resize:none;width:100%;height:84px;flex-shrink:0;font-size:21px;line-height:24px;padding:5px 12px}
+#amt-viewer-wraper.histogram-page .hb-controls{display:flex;align-items:center;gap:10px;height:40px;font-size:19px;flex-shrink:0}
+#amt-viewer-wraper.histogram-page .hb-controls label{white-space:nowrap}
+#amt-viewer-wraper.histogram-page .hb-controls input{height:36px;width:90px;text-align:center;font-size:21px}
+#amt-viewer-wraper.histogram-page #hb-error{flex:1;min-width:0;color:#b72e2e;font-size:15px;line-height:18px}
+#amt-viewer-wraper.histogram-page .hb-summary-wrap{height:64px;margin:8px 0;border:1px solid #d9e1ed;border-radius:10px;background:#fff;overflow:hidden}
+#amt-viewer-wraper.histogram-page .bp-summary tbody tr{height:32px;color:#8064ac}
+#amt-viewer-wraper.histogram-page .bp-summary tbody th{font-size:17px;line-height:18px}
+#amt-viewer-wraper.histogram-page .hb-graph-wrap{height:354px;border:1px solid #d9e1ed;border-radius:12px;background:#fff;overflow:hidden}
+#amt-viewer-wraper.histogram-page #hb-chart{display:block;width:100%;height:100%}
+#amt-viewer-wraper.histogram-page[data-dirty=true] #hb-chart,#amt-viewer-wraper.histogram-page[data-dirty=true] #hb-summary{opacity:.4}
+
+/* Full lesson layout */
+/* 원본 생각 넓히기 본문·하단 버튼과 활동 도구를 한 페이지에 배치합니다. */
+html,body{margin:0;width:100%;height:100%;min-width:0;overflow:hidden;background:#fff}
+#amt-viewer-wraper.lesson-page{position:absolute;width:1280px;height:720px;transform-origin:top left;font-family:pre-m,"Malgun Gothic",sans-serif;color:#222}
+#amt-viewer-wraper.lesson-page #content{width:1280px;height:720px;background:#fff;overflow:hidden}
+#amt-viewer-wraper.lesson-page .main-scroll{width:1280px;height:654px;overflow-y:auto;overflow-x:hidden;scrollbar-color:#c6cbd5 #f4f5f7;scrollbar-width:thin}
+#amt-viewer-wraper.lesson-page .scroll-inner{width:1264px;min-height:654px;height:auto;overflow:visible;padding-bottom:30px}
+#amt-viewer-wraper.lesson-page .title-main{position:relative;margin:0;padding:112px 40px 0;height:auto;min-height:0}
+#amt-viewer-wraper.lesson-page .title-main .bullet{top:20px;left:40px}
+#amt-viewer-wraper.lesson-page .title-main .text-cont{position:static;width:auto;margin:0;padding:0}
+#amt-viewer-wraper.lesson-page .title-main .text-1{font-size:29px;line-height:1.65;letter-spacing:-.6px}
+#amt-viewer-wraper.lesson-page .content-area{position:relative;left:0;top:0;width:auto;margin:0;padding:0 40px;font-size:28px;line-height:1.6}
+#amt-viewer-wraper.lesson-page .content-area>.content-box{position:relative;left:0;top:0;width:100%;height:auto;margin:0;padding:0;border:0;background:none}
+#amt-viewer-wraper.lesson-page .lesson-data-heading{display:flex;position:relative;justify-content:center;align-items:center;margin:22px 0 8px;font-family:pre-sb;font-size:26px}
+#amt-viewer-wraper.lesson-page .lesson-unit{position:absolute;right:0;font-family:pre-m;font-size:22px}
+#amt-viewer-wraper.lesson-page .table-cont.lesson-data-table{position:relative;width:100%;padding:12px 24px;border:1.5px solid #aaadb4;border-radius:16px;background:#fff}
+#amt-viewer-wraper.lesson-page #table-cont-01.lesson-data-table>.table{border:0;width:100%;table-layout:fixed;border-collapse:collapse}
+#amt-viewer-wraper.lesson-page #table-cont-01.lesson-data-table>.table td{padding:0;border:0;background:transparent;height:48px;font-family:pre-m;font-size:29px;text-align:center;line-height:1.4}
+#amt-viewer-wraper.lesson-page .bracket-num-text.lesson-question{display:flex;align-items:flex-start;gap:8px;margin:20px 0 12px;font-size:27px;line-height:1.6}
+#amt-viewer-wraper.lesson-page .lesson-question>.num{position:static;flex:none;width:auto;padding:0;font-size:inherit;line-height:inherit}
+#amt-viewer-wraper.lesson-page .lesson-question>.text{padding:0;font-size:inherit;line-height:inherit}
+#amt-viewer-wraper.lesson-page .content-area>.bp-activity{margin:0;border:1px solid #d7dfec;border-radius:14px;padding:12px;background:#fff;font-size:21px;line-height:1.4}
+#amt-viewer-wraper.lesson-page #quiz-tool-01{position:relative;width:100%;height:auto;margin:0;padding:0}
+#amt-viewer-wraper.lesson-page .activity-input-box{position:relative;left:auto;top:auto;display:inline-block;margin:0;padding:0;border:0;background:none;min-width:0;height:auto;vertical-align:middle;font:inherit;text-indent:0;line-height:normal;box-shadow:none}
+#amt-viewer-wraper.lesson-page .activity-input-box>.placeholder,#amt-viewer-wraper.lesson-page .activity-input-box::before,#amt-viewer-wraper.lesson-page .activity-input-box::after{display:none}
+#amt-viewer-wraper.lesson-page .activity-input-box[data-input-for=hb-name]{width:260px;height:32px}
+#amt-viewer-wraper.lesson-page .activity-input-box[data-input-for=hb-unit]{width:110px;height:32px}
+#amt-viewer-wraper.lesson-page .activity-input-box[data-input-for=hb-data]{display:block;width:100%;height:84px;flex-shrink:0}
+#amt-viewer-wraper.lesson-page .hb-controls>.activity-input-box{width:90px;height:36px;flex-shrink:0}
+#amt-viewer-wraper.lesson-page .bp-button{position:static;display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:0;height:40px;padding:4px 17px;border:1.5px solid #c2cde0;border-radius:8px;background:#fff;color:#62708a;font-family:pre-sb;font-size:20px;white-space:nowrap;transform:none;text-indent:0}
+#amt-viewer-wraper.lesson-page .bp-primary{background:#917ac0;border-color:#917ac0;color:#fff}
+#amt-viewer-wraper.lesson-page .bp-button::before,#amt-viewer-wraper.lesson-page .bp-button::after{display:none}
+#amt-viewer-wraper.lesson-page .bp-button>.text{position:static;left:auto;top:auto;display:inline;width:auto;min-width:0;margin:0;padding:0;color:inherit;font:inherit;line-height:1;transform:none}
+#amt-viewer-wraper.lesson-page .hb-summary-wrap.table-cont{position:relative;width:100%;padding:0}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary{width:100%;height:100%;table-layout:fixed;border:0;border-collapse:collapse;text-align:center;font-size:20px;line-height:1.1}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary th,#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary td{height:auto;padding:0 9px;border:0;border-right:1px solid #e1e5ee;border-bottom:1px solid #e1e5ee;font-size:inherit;line-height:inherit;vertical-align:middle;background:#fff}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary tr>:last-child{border-right:0}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary tbody tr:last-child>*{border-bottom:0}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary thead{height:30px;color:#535764;font-size:17px;font-family:pre-m}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary thead th{background:#f2f4fa}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary tbody th{font-family:pre-sb;font-size:17px;background:#faf9fc;overflow-wrap:anywhere}
+#amt-viewer-wraper.lesson-page #table-cont-02 .bp-summary .bp-long-number{font-size:15px}
+#amt-viewer-wraper.lesson-page .hb-graph-wrap{height:auto;aspect-ratio:1200/354}
+#amt-viewer-wraper.lesson-page #hb-chart{width:100%;height:auto;aspect-ratio:1200/354}
+#amt-viewer-wraper.lesson-page .content-box-03>.flex-box,#amt-viewer-wraper.lesson-page .content-box-03 .flex-inner{display:block;width:100%;padding:0}
+#amt-viewer-wraper.lesson-page #quiz-01{position:relative;left:0;top:0;width:100%;height:auto;margin:0;padding:0}
+#amt-viewer-wraper.lesson-page #quiz-01 .lesson-answer-box{position:relative;left:0;top:0;width:100%;height:172px;margin:8px 0 0}
+#amt-viewer-wraper.lesson-page #lesson-answer{position:relative;left:0;top:0;width:calc(100% - 52px);height:124px;margin:24px 26px;padding:0;border:0;resize:none;font:26px/55px pre-m,"Malgun Gothic",sans-serif;color:#292b31;background:transparent;letter-spacing:0}
+#amt-viewer-wraper.lesson-page .lesson-answer-box>.placeholder{display:none}
+#amt-viewer-wraper.lesson-page #lesson-answer::placeholder{color:#b4b6bd;opacity:1}
+#amt-viewer-wraper.lesson-page .bottom-g-icon{top:654px;height:66px;align-items:center;z-index:10;background:#fff;border-top:1px solid #edf0f4}
+#amt-viewer-wraper.lesson-page .bottom-g-icon>.g-icon{flex-shrink:0}
+#amt-viewer-wraper.lesson-page #lesson-status{margin:0 auto 0 115px;max-width:710px;font-family:pre-m;font-size:18px;line-height:1.4;color:#6c578f}
+#amt-viewer-wraper.lesson-page .g-answer-cont{bottom:66px}
+#amt-viewer-wraper.lesson-page .g-answer-cont .text-cont{font-size:27px;line-height:1.6}
+#amt-viewer-wraper.lesson-page .g-answer-cont .bracket-num-text{display:flex;gap:12px}
+#amt-viewer-wraper.lesson-page .g-answer-cont .bracket-num-text>.num{position:static;flex:none}
+#amt-viewer-wraper.lesson-page .g-answer-cont .bracket-num-text>.text{padding:0 24px 0 0}
+#amt-viewer-wraper.lesson-page :disabled{opacity:.72;cursor:default}
+#amt-viewer-wraper.lesson-page button:focus-visible,#amt-viewer-wraper.lesson-page textarea:focus-visible,#amt-viewer-wraper.lesson-page .main-scroll:focus-visible{outline:3px solid #917ac0;outline-offset:-3px}
+#amt-viewer-wraper.lesson-page .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
