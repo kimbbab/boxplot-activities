@@ -4,27 +4,11 @@ html,body{margin:0;min-height:100%;font-family:"Malgun Gothic","Apple SD Gothic 
 a{color:inherit;text-decoration:none}
 button,a{-webkit-tap-highlight-color:transparent}
 a:focus-visible{outline:3px solid #7356ad;outline-offset:5px}
-.menu-page{min-height:100vh;min-height:100dvh;background:linear-gradient(145deg,#edf6fb 0%,#f6f5fb 58%,#f5effa 100%)}
-.menu{max-width:1160px;margin:0 auto;padding:70px 32px 36px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 18px;padding:8px 13px;border:1px solid #d7e8f2;border-radius:20px;background:#ffffffc7;color:#53728b;font-size:13px;font-weight:700;letter-spacing:.05em}
-.eyebrow::before{content:"";width:7px;height:7px;background:#8b76bd;border-radius:50%}
-h1{margin:0;font-size:44px;font-weight:800;letter-spacing:-.065em;line-height:1.25}
-.intro{margin:17px 0 0;color:var(--muted);font-size:17px;line-height:1.8;word-break:keep-all}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
-.activity-card{--accent:var(--purple);--wash:#f1ebfa;display:flex;flex-direction:column;min-height:352px;padding:26px;border:1px solid #e1ddeb;border-radius:22px;background:#fff;box-shadow:0 8px 28px #36446b08;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
-.activity-card:hover{transform:translateY(-4px);border-color:#c6b9db;box-shadow:0 15px 32px #36446b12}
-.activity-card.sky{--accent:var(--sky);--wash:#e9f5fa;border-color:#d7e6ef}
-.activity-card.mixed{--accent:#7663ae;--wash:#eeeffa}
-.card-top{display:flex;align-items:center;justify-content:space-between}
-.number{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:13px;background:var(--wash);color:var(--accent);font-size:15px;font-weight:800}
-.card-topic{color:#7e879a;font-size:12px;font-weight:700}
-.card-visual{height:74px;width:100%;margin:20px 0 14px;color:var(--accent);overflow:visible}
-.subtitle{margin:0 0 7px;color:var(--accent);font-size:14px;font-weight:700}
-.activity-card h2{margin:0;font-size:23px;letter-spacing:-.04em}
-.description{margin:13px 0 24px;color:var(--muted);font-size:14px;line-height:1.85;word-break:keep-all}
-.start{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:17px;border-top:1px solid #edf0f5;color:var(--accent);font-size:14px;font-weight:800}
-.start svg{width:18px;height:18px}
-.menu-note{margin:27px 0 0;color:#7a8497;font-size:13px;text-align:center;line-height:1.8}
+.menu-page{background:#fff}
+.menu{max-width:900px;margin:0 auto;padding:48px 28px}
+.menu nav{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.menu a{color:#245a9b;font-size:20px;line-height:1.6;text-decoration:underline;text-underline-offset:4px;word-break:keep-all}
+.menu a:hover{color:#163d70}
 .activity-page{height:100vh;height:100dvh;min-height:0;overflow:hidden;background:#edf1f7}
 .web-shell{height:100%;display:grid;grid-template-rows:48px minmax(0,1fr)}
 .web-header{display:flex;align-items:center;gap:20px;min-width:0;padding:0 20px;background:#fff;border-bottom:1px solid #e3e7ef;z-index:1}
@@ -33,6 +17,4 @@ h1{margin:0;font-size:44px;font-weight:800;letter-spacing:-.065em;line-height:1.
 .web-title{margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;letter-spacing:-.025em;font-weight:700}
 .web-title span{margin-left:10px;color:#7d6a9f;font-size:12px;font-weight:500}
 .activity-frame{display:block;width:100%;height:100%;min-height:0;border:0;background:#fff}
-@media(max-width:850px){.menu{padding-top:45px}.cards{gap:16px}.activity-card{padding:21px}.activity-card h2{font-size:20px}.card-topic{font-size:11px}}
-@media(max-width:670px){.menu{padding:34px 20px 24px}h1{font-size:36px}.intro{font-size:15px}.cards{grid-template-columns:1fr;margin-top:28px}.activity-card{min-height:0;padding:24px}.card-visual{height:60px;margin:16px 0}.description{margin-bottom:19px}.web-header{padding:0 12px;gap:13px}.web-title{font-size:12px}.web-title span{display:none}}
-@media(prefers-reduced-motion:reduce){.activity-card{transition:none}.activity-card:hover{transform:none}}
+@media(max-width:670px){.menu{padding:32px 20px}.menu a{font-size:18px}.web-header{padding:0 12px;gap:13px}.web-title{font-size:12px}.web-title span{display:none}}

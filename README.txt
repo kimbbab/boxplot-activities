@@ -7,7 +7,7 @@
 저장소: https://github.com/kimbbab/boxplot-activities
 
 첫 화면: index.html — 상자그림 그리기 활동 목록
-활동 1: boxplot-1/index.html — 7.1 함께해요
+활동 1: boxplot-1/index.html — 7.2 함께해요
 활동 2: boxplot-2/index.html — 7.2 생각넓히기1
 활동 3: boxplot-3/index.html — 7.2 생각넓히기2 (히스토그램·상자그림 비교 수업)
 
