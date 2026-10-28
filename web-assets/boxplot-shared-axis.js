@@ -132,10 +132,10 @@
       throw new Error('수직선의 최솟값과 최댓값을 확인해 주세요.');
     }
     var span = max - min;
-    var padding = span === 0 ? Math.max(1, Math.abs(min) * 0.1) : span * 0.08;
+    var padding = span === 0 ? Math.max(1, Math.abs(min) * 0.1) : 0;
     var desiredMin = min - padding;
     var desiredMax = max + padding;
-    var rawStep = Math.max((desiredMax - desiredMin) / 6, Math.max(Math.abs(min), Math.abs(max)) * Number.EPSILON);
+    var rawStep = Math.max((desiredMax - desiredMin) / (span === 0 ? 6 : 8), Math.max(Math.abs(min), Math.abs(max)) * Number.EPSILON);
     var power = Math.pow(10, Math.max(-323, Math.floor(Math.log10(rawStep || Number.MIN_VALUE))));
     var fraction = rawStep / power;
     var multiple = fraction <= 1 ? 1 : fraction <= 2 ? 2 : fraction <= 2.5 ? 2.5 : fraction <= 5 ? 5 : 10;
@@ -224,29 +224,27 @@
     if(!summaries.length)return;
     const chart=$('bp-chart'),spacious=mode==='five';
     const domain=math.axisDomain(Math.min(...summaries.map(s=>s.min)),Math.max(...summaries.map(s=>s.max)));
-    const left=176,right=1058,axisY=spacious?282:184,gridTop=spacious?18:7;
+    const left=160,right=1090,axisY=spacious?260:180,gridTop=spacious?28:12;
     const x=value=>left+(value-domain.min)/(domain.max-domain.min)*(right-left);
     chart.setAttribute('viewBox',`0 0 1150 ${spacious?336:218}`);
     const description='두 자료는 아래의 하나의 공통 축을 사용합니다. '+summaries.map((s,i)=>`${datasetName(i)}: ${labels.map((l,j)=>l+' '+fmt(s[keys[j]])).join(', ')}.`).join(' ');
     chart.replaceChildren(element('title',{id:'bp-chart-title'},'공통 축으로 비교하는 상자그림'),element('desc',{id:'bp-chart-desc'},description));
     const grid=element('g',{'aria-hidden':'true'});
-    grid.append(element('rect',{x:left,y:gridTop,width:right-left,height:axisY-gridTop,fill:'#fafbfe'}));
     const longestTick=Math.max(...domain.ticks.map(value=>fmt(value).length));
     const tickStride=Math.max(1,Math.ceil(domain.ticks.length*Math.max(48,longestTick*10+18)/(right-left)));
     domain.ticks.forEach((value,index)=>{
       const px=x(value);
-      grid.append(element('line',{'data-shared-grid':value,x1:px,x2:px,y1:gridTop,y2:axisY,stroke:'#e0e5ed','stroke-width':1.1}));
+      grid.append(element('line',{'data-shared-grid':value,x1:px,x2:px,y1:gridTop,y2:axisY,stroke:'#dedede','stroke-width':1.2}));
       grid.append(element('line',{'data-shared-tick':value,x1:px,x2:px,y1:axisY,y2:axisY+6,stroke:'#717c8d','stroke-width':1.4}));
       if(index%tickStride===0 && index<=domain.ticks.length-1-tickStride || index===domain.ticks.length-1){
         grid.append(element('text',{'data-tick-value':value,x:px,y:axisY+(spacious?30:23),'text-anchor':'middle',fill:'#596579','font-family':'pre-m, sans-serif','font-size':longestTick>13?14:spacious?21:18},fmt(value)));
       }
     });
     grid.append(element('line',{'data-axis':'shared',x1:left,x2:right,y1:axisY,y2:axisY,stroke:'#717c8d','stroke-width':1.7}));
-    grid.append(element('text',{x:20,y:axisY+(spacious?7:5),fill:'#596579','font-family':'pre-m, sans-serif','font-size':spacious?19:16},'공통 축'));
     chart.append(grid);
     summaries.forEach((s,index)=>{
-      const cy=spacious?50+index*124:29+index*83,half=spacious?20:14,cap=spacious?15:11;
-      const top=cy-half,bottom=cy+half,color=colors[index],valueY=spacious?99+index*124:70+index*83;
+      const cy=spacious?84+index*120:52+index*82,half=spacious?24:17,cap=spacious?15:11;
+      const top=cy-half,bottom=cy+half,color=colors[index],valueY=top-(spacious?12:9);
       const group=element('g',{'data-series':index?'b':'a','aria-hidden':'true'});
       const nameCharacters=Array.from(datasetName(index));
       const nameLines=nameCharacters.length>6?[nameCharacters.slice(0,6).join(''),nameCharacters.slice(6).join('')]:[nameCharacters.join('')];
@@ -269,9 +267,11 @@
       const shift=Math.max(left-positions[0],Math.min(right-positions[4],idealShift));
       positions.forEach((value,i)=>positions[i]=value+shift);
       keys.forEach((key,i)=>{
-        const px=positions[i],actual=actuals[i],startY=(i===0||i===4)?cy+cap:bottom;
-        group.append(element('path',{'data-guide':key,d:`M ${actual} ${startY+2} V ${bottom+7} L ${px} ${valueY-20}`,stroke:color,'stroke-opacity':.55,'stroke-width':1.2,'stroke-dasharray':'3 3',fill:'none'}));
-        group.append(element('text',{'data-value':key,x:px,y:valueY,'text-anchor':'middle',fill:color,'font-family':'pre-sb, sans-serif','font-size':fmt(s[key]).length>13?17:spacious?23:21,'paint-order':'stroke',stroke:'#fafbfe','stroke-width':5,'stroke-linejoin':'round'},fmt(s[key])));
+        const px=positions[i],actual=actuals[i],startY=(i===0||i===4)?cy-cap:top;
+        if(Math.abs(px-actual)>1){
+          group.append(element('path',{'data-guide':key,d:`M ${actual} ${startY-2} L ${px} ${valueY+4}`,stroke:color,'stroke-opacity':.55,'stroke-width':1.2,'stroke-dasharray':'3 3',fill:'none'}));
+        }
+        group.append(element('text',{'data-value':key,x:px,y:valueY,'text-anchor':'middle',fill:color,'font-family':'pre-sb, sans-serif','font-size':fmt(s[key]).length>13?17:spacious?21:19,'paint-order':'stroke',stroke:'#fff','stroke-width':7,'stroke-linejoin':'round'},fmt(s[key])));
       });
       chart.append(group);
     });
@@ -362,7 +362,7 @@
   var root = document.getElementById('amt-viewer-wraper');
   var styles = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
   function reveal() {
-    if (!root || styles.length !== 3 || !styles.every(function (link) { return link.sheet !== null; })) return;
+    if (!root || styles.length !== 4 || !styles.every(function (link) { return link.sheet !== null; })) return;
     root.classList.add('visible', 'page-ready');
     root.style.removeProperty('display');
   }
